@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MA'sBeaute - Clarins</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="stylem.css">
+ 
+</head>
+<body>
+  <style> body{
+      
+       background: linear-gradient(90deg, #989596 35%, #f8bbd0 100%);
+  
+      background-position: center;
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+</style>
+   <div class="nav">
+     <p class="tri_dot" id="navtoggle" >⋮</p>
+        <div id="panelNav" class="panel-content4" >
+            <ul class="panel-list" style="list-style-type: square; font-size: 18px;padding-left: 40px; ">
+                <li style="padding: 5px 0;"><a href="index.html">Home</a></li>
+                <br>
+                <li><a href="chanel1.html">Chanel</a></li>
+                <br>
+                <li><a href="colorbar1.html">Colorbar</a></li>
+                <br>
+                <li><a href="grande1.html">Grande</a>
+                </li>
+                <br>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+  <div class="container">
+    <section class="products" tabindex="0">
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/6/16252793666057037429_1.jpg" alt="" />
+        <div class="details">
+          <h3>Clarins Lip Comfort Oil 03
+(7ml)</h3>
+          <p>Lip Gloss</p>
+          <div class="price-add">
+            <span>MRP:₹4300</span>
+            <button onclick="addToCart('Clarins Lip Gloss', 4300)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/6/168d0513666057202445_1.jpg" alt="" />
+        <div class="details">
+          <h3>Clarins Double Serum
+(75ml)</h3>
+          <p>Serum</p>
+          <div class="price-add">
+            <span>MRP:₹12000</span>
+            <button onclick="addToCart('Clarins Double Serum', 12000)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/6/16252793666057104367_1.jpg" alt="" />
+        <div class="details">
+          <h3>Clarins Super Restorative Night Cream
+(50ml)</h3>
+          <p>Night Cream</p>
+          <div class="price-add">
+            <span>MRP:₹9600</span>
+            <button onclick="addToCart('Clarins Night Cream', 9600)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/6/16252793380810463170_1.jpg" alt="" />
+        <div class="details">
+          <h3>Clarins Double Serum Eye
+(20ml)</h3>
+          <p>Under Eye Serum</p>
+          <div class="price-add">
+            <span>MRP:₹6000</span>
+            <button onclick="addToCart('Clarins Under Eye Serum', 6000)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/6/9679e73CLARI00000306_1.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>Clarins Bright Plus Moisturizing Emulsion
+(75ml)</h3>
+          <p>Day Cream</p>
+          <div class="price-add">
+            <span>MRP:₹4600</span>
+            <button onclick="addToCart('Clarins Day Cream', 4600)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/c/4c9ef6cCLARI00000375_1.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>Clarins Bright Plus Gel Cream
+(50ml)</h3>
+          <p>Day Cream</p>
+          <div class="price-add">
+            <span>MRP:₹6400</span>
+            <button onclick="addToCart('Clarins Day Cream(50ml)', 6400)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/c/4c9ef6cCLARI00000373_1.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>Clarins Bright Plus Milky Essence
+(200ml)</h3>
+          <p>Face Moisturizer & Day Cream</p>
+          <div class="price-add">
+            <span>MRP:₹3400</span>
+            <button onclick="addToCart('Clarins Face Moisturisers', 3400)">Add +</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="hero">
+      <img class="model" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThX3y1zd6EgW1VP0ZqJ1CZ-jzIeZrZCb0d4Q&s" alt="Model with glowing skin" />
+      <div class="hero-text"></div>
+      
+    </section>
+  </div>
+
+  <script>
+     function addToCart(name, price, type) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(item => item.name === name && item.type === type);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1, type });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+        }
+     function closeAllPanels() {
+        document.getElementById('panelNav').style.display = 'none';
+    }
+
+    document.getElementById('navtoggle').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click from bubbling up to the document
+        var panelContent = document.getElementById('panelNav');
+        panelContent.style.display = panelContent.style.display === 'block' ? 'none' : 'block';
+        closeAllPanelsExcept(panelContent);
+    });
+
+    function closeAllPanelsExcept(exceptPanel) {
+        var panels = [document.getElementById('panelNav')];
+        panels.forEach(function(panel) {
+            if (panel !== exceptPanel) {
+                panel.style.display = 'none';
+            }
+        });
+    }
+
+    // Close the panel when clicking anywhere else on the document
+    document.addEventListener('click', function(event) {
+        var panelContent = document.getElementById('panelNav');
+        if (panelContent.style.display === 'block' && !panelContent.contains(event.target) && event.target !== document.getElementById('navtoggle')) {
+            closeAllPanels();
+        }
+    });
+
+    const productsContainer = document.querySelector('.products');
+    window.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            productsContainer.scrollBy({ top: 200, behavior: 'smooth' });
+        }
+    });
+  </script>
+</body>
+</html>

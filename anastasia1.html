@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MA'sBeaute - Anastasia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="stylem.css">
+ 
+</head>
+<body>
+  <style> body{
+      
+      background: linear-gradient(90deg, #989596 35%, #f8bbd0 100%);
+  
+      background-position: center;
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+</style>
+  <div class="nav">
+     <p class="tri_dot" id="navtoggle" >⋮</p>
+        <div id="panelNav" class="panel-content4">
+            <ul class="panel-list" style="list-style-type: square; font-size: 18px;padding-left: 40px; ">
+                <li style="padding: 5px 0;"><a href="index.html">Home</li>a></li>
+                <br>
+                <li><a href="dior1.html">Dior</a></li>
+                <br>
+                <li><a href="clarins1.html">Clarins</a></li>
+                <br>
+                <li><a href="mac1.html">MAC</a></li>
+                <br>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+  <div class="container">
+    <section class="products" tabindex="0">
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/5/f530dd8ANAST00000080_1.jpg" alt="Bobbi Brown Taupe Bronser" />
+        <div class="details">
+          <h3>Anastasia Beverly Hills Dipbrow Pomade - Dark Brown
+(4g)</h3>
+          <p>Dipbrow Pomade</p>
+          <div class="price-add">
+            <span>MRP:₹2480</span>
+            <button onclick="addToCart('Anastasia Dipbrow Pomade', 2480)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/0/80fe919ANAST00000106_1.jpg" alt="Make Up For Ever HD Foundation" />
+        <div class="details">
+          <h3>Anastasia Beverly Hills Setting Spray-Dewy Set Original-Mini
+(30ml)</h3>
+          <p>Setting Spray</p>
+          <div class="price-add">
+            <span>MRP:₹1650</span>
+            <button onclick="addToCart('Anastasia Setting Spray', 1650)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/0/80fe919ANAST00000118_1.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>Anastasia Beverly Hills Soft Glam Palette
+(10g)</h3>
+          <p>EyeShadow</p>
+          <div class="price-add">
+            <span>MRP:₹4800</span>
+            <button onclick="addToCart('Anastasia EyeShadow', 4800)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/5/f530dd8ANAST00000069_1.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>Anastasia Beverly Hills Brow Wiz - Dark Brown
+(0.085gm)</h3>
+          <p>Eye Brow Enhancer</p>
+          <div class="price-add">
+            <span>MRP:₹2480</span>
+            <button onclick="addToCart('Anastasia Eyebrow Enhancer', 2480)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/4/54f8d70689304330527_1.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3></h3>Anastasia Beverly Hills Satin Lipstick - Sugar Plum
+(3g)</h3>
+          <p>Lipstick</p>
+          <div class="price-add">
+            <span>MRP:₹2460</span>
+            <button onclick="addToCart('Anastasia Lipstick', 2460)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/c/8/c843c62689304360340_2.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>Anastasia Beverly Hills Luminous Foundation - 270c
+(30ml)</h3>
+          <p>Foundation</p>
+          <div class="price-add">
+            <span>MRP:₹3290</span>
+            <button onclick="addToCart('Anastasia Foundation', 3290)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/d/4/d48ec62689304250016_1.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>Anastasia Beverly Hills Loose Setting Powder - Vanilla
+(25g)</h3>
+          <p>Setting Powder</p>
+          <div class="price-add">
+            <span>MRP:₹4200</span>
+            <button onclick="addToCart('Anastasia Setting Powder', 2480)">Add +</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="hero">
+      <img class="model" src="https://logos-world.net/wp-content/uploads/2023/01/Anastasia-Beverly-Hills-Logo.png" alt="" />
+      <div class="hero-text"></div>
+      
+    </section>
+  </div>
+
+  <script>
+     function addToCart(name, price, type) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(item => item.name === name && item.type === type);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1, type });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+        }
+
+    function closeAllPanels() {
+        document.getElementById('panelNav').style.display = 'none';
+    }
+
+    document.getElementById('navtoggle').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click from bubbling up to the document
+        var panelContent = document.getElementById('panelNav');
+        panelContent.style.display = panelContent.style.display === 'block' ? 'none' : 'block';
+        closeAllPanelsExcept(panelContent);
+    });
+
+    function closeAllPanelsExcept(exceptPanel) {
+        var panels = [document.getElementById('panelNav')];
+        panels.forEach(function(panel) {
+            if (panel !== exceptPanel) {
+                panel.style.display = 'none';
+            }
+        });
+    }
+
+    // Close the panel when clicking anywhere else on the document
+    document.addEventListener('click', function(event) {
+        var panelContent = document.getElementById('panelNav');
+        if (panelContent.style.display === 'block' && !panelContent.contains(event.target) && event.target !== document.getElementById('navtoggle')) {
+            closeAllPanels();
+        }
+    });
+
+    const productsContainer = document.querySelector('.products');
+    window.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            productsContainer.scrollBy({ top: 200, behavior: 'smooth' });
+        }
+    });
+  </script>
+</body>
+</html>

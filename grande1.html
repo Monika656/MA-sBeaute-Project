@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MA'sBeaute - Grande</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="stylem.css">
+ 
+</head>
+<body>
+  <style> body{
+      
+       background: linear-gradient(90deg, #989596 35%, #f8bbd0 100%);
+  
+      background-position: center;
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+</style>
+   <div class="nav">
+     <p class="tri_dot" id="navtoggle" >⋮</p>
+        <div id="panelNav" class="panel-content4" >
+            <ul class="panel-list" style="list-style-type: square; font-size: 18px;padding-left: 40px; ">
+                <li style="padding: 5px 0;"><a href="index.html">Home</a></li>
+                <br>
+                <li><a href="dior1.html">Dior</a></li>
+                <br>
+                <li><a href="chanel1.html">Chanel</a></li>
+                <br>
+                <li><a href="lakme1.html">Lakme</a></li>
+                <br>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+  <div class="container">
+    <section class="products" tabindex="0">
+      <article class="product">
+        <img style="height: 250px;width: 250px;" src="https://grandecosmetics.com/cdn/shop/files/MainImage_7e76eec1-5208-400c-9bc1-bf60fd28a9ed.jpg?v=1750368216&width=3840" alt="Bobbi Brown Taupe Bronser" />
+        <div class="details">
+          <h3>GrandeMASCARA
+Conditioning Peptide Mascara</h3>
+          <p>Mascara</p>
+          <div class="price-add">
+            <span>MRP:₹1630</span>
+            <button onclick="addToCart('Grande Macara', 1630)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img style="height: 250px;width: 250px;"  src="https://grandecosmetics.com/cdn/shop/files/MainImage_5660ad68-43ba-4f9f-bc3f-9282fc17454f.jpg?v=1736346584&width=3840" alt="Make Up For Ever HD Foundation" />
+        <div class="details">
+          <h3>GrandeWRAP
+Tubing Mascara with ProVitamin B5</h3>
+          <p>Mascara</p>
+          <div class="price-add">
+            <span>MRP:₹1390</span>
+            <button onclick="addToCart('Grande Wrap', 1390)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img style="height: 250px;width: 250px;"  src="https://grandecosmetics.com/cdn/shop/files/MainImage_0b31641f-87bf-4ad4-ae83-ea73be597caa.jpg?v=1718212228&width=3840" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>GrandeHAIR
+Hair Enhancing Serum</h3>
+          <p>Serum</p>
+          <div class="price-add">
+            <span>MRP:₹6865</span>
+            <button onclick="addToCart('Grande Hair Serum', 6865)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img style="height: 250px;width: 250px;"  src="https://grandecosmetics.com/cdn/shop/files/MainImage-2.jpg?v=1718218001&width=3840" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>GrandeHAIR</h3>
+          <p>Serum</p>
+          <div class="price-add">
+            <span>MRP:₹6865</span>
+            <button onclick="addToCart('GrandeHair Serum', 6865)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img style="height: 250px;width: 250px;"  src="https://grandecosmetics.com/cdn/shop/files/MainImage_1_305d819e-0a45-4af7-929b-308b0b3faada.jpg?v=1718202276&width=3840" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>GrandePRIMER
+Pre-Mascara Lengthener & Thickener
+Regular 
+
+</h3>
+          <p>Lash Primer</p>
+          <div class="price-add">
+            <span>MRP:₹2145</span>
+            <button onclick="addToCart('Grande lash Primer', 2145)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img style="height: 250px;width: 250px;"  src="https://grandecosmetics.com/cdn/shop/files/MainImage_8b61d779-30be-471b-ac15-5a7cacfa6ab9.jpg?v=1718202207&width=3840" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>GrandeREPAIR
+Leave-In Lash Conditioner</h3>
+          <p>Lash Primer</p>
+          <div class="price-add">
+            <span>MRP:₹1300</span>
+            <button onclick="addToCart('Grande Lash Primer', 1300)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img style="height: 250px;width: 250px;"  src="https://grandecosmetics.com/cdn/shop/files/ClearLipGlossMainImage_f0fd8369-e98e-4d94-8a53-e3858a1222a3.jpg?v=1718202212&width=3840" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>GrandeLIPS
+Hydrating Lip Plumper</h3>
+          <p>Lip Plumper</p>
+          <div class="price-add">
+            <span>MRP:₹2316</span>
+            <button onclick="addToCart('Grande Lip Plumper', 2316)">Add +</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="hero">
+      <img class="model" src="https://w7.pngwing.com/pngs/586/489/png-transparent-grande-cosmetics-logo-cruelty-free-cosmetics-and-beauty-brands.png" alt="Model with glowing skin" />
+      <div class="hero-text"></div>
+      
+    </section>
+  </div>
+
+  <script>
+     function addToCart(name, price, type) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(item => item.name === name && item.type === type);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1, type });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+        }
+    function closeAllPanels() {
+        document.getElementById('panelNav').style.display = 'none';
+    }
+
+    document.getElementById('navtoggle').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click from bubbling up to the document
+        var panelContent = document.getElementById('panelNav');
+        panelContent.style.display = panelContent.style.display === 'block' ? 'none' : 'block';
+        closeAllPanelsExcept(panelContent);
+    });
+
+    function closeAllPanelsExcept(exceptPanel) {
+        var panels = [document.getElementById('panelNav')];
+        panels.forEach(function(panel) {
+            if (panel !== exceptPanel) {
+                panel.style.display = 'none';
+            }
+        });
+    }
+
+    // Close the panel when clicking anywhere else on the document
+    document.addEventListener('click', function(event) {
+        var panelContent = document.getElementById('panelNav');
+        if (panelContent.style.display === 'block' && !panelContent.contains(event.target) && event.target !== document.getElementById('navtoggle')) {
+            closeAllPanels();
+        }
+    });
+
+    const productsContainer = document.querySelector('.products');
+    window.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            productsContainer.scrollBy({ top: 200, behavior: 'smooth' });
+        }
+    });
+  </script>
+</body>
+</html>

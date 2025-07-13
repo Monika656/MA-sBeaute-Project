@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MA'sBeaute - MAC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="stylem.css">
+ 
+</head>
+<body>
+   <style> body{
+      
+       background: linear-gradient(90deg, #989596 35%, #f8bbd0 100%);
+  
+      background-position: center;
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+</style>
+   <div class="nav">
+     <p class="tri_dot" id="navtoggle" >⋮</p>
+        <div id="panelNav" class="panel-content4" >
+            <ul class="panel-list" style="list-style-type: square; font-size: 18px; padding-left: 40px;">
+                <li style="padding: 5px 0;"><a href="index.html">Home</a></li>
+                <br>
+                <li><a href="dior1.html">Dior</a></li>
+                <br>
+                <li><a href="colorbar1.html">Colorbar</a></li>
+                <br>
+                <li><a href="lakme1.html">Lakme</a></li>
+                <br>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+  <div class="container">
+    <section class="products" tabindex="0">
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/0/502faf3773602703999_1.jpg" alt="Bobbi Brown Taupe Bronser" />
+        <div class="details">
+          <h3>M.A.C MACximal Mini Matte Nude Lipstick - Mehr
+(1.7g)</h3>
+          <p>Lipstick</p>
+          <div class="price-add">
+            <span>MRP:₹1150</span>
+            <button onclick="addToCart('MAC matte lipstick', 1150)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/2/f26df5e773602720347_1.png" alt="Make Up For Ever HD Foundation" />
+        <div class="details">
+          <h3>M.A.C MACximal Satin Mini Lipstick - Dubonnet
+(1.8g)</h3>
+          <p>Lipstick</p>
+          <div class="price-add">
+            <span>MRP:₹1150</span>
+            <button onclick="addToCart('MAC Mini Lipstick', 1150)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/c/f/cf4371dMACXX00002437_1.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>M.A.C Studio Fix Powder Plus 24-Hour Oil Control Compact Foundation - NC35
+(12g)</h3>
+          <p>Compact</p>
+          <div class="price-add">
+            <span>MRP:₹3400</span>
+            <button onclick="addToCart('MAC Compact', 3400)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/6/56e1f1aMACXX00001839_1.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>M.A.C Prep + Prime Fix+ (Alcohol Free) Setting Spray - Original (Makeup Fixer) With Green Tea
+(100ml)</h3>
+          <p>Setting Spray</p>
+          <div class="price-add">
+            <span>MRP:₹2700</span>
+            <button onclick="addToCart('MAC Setting spray', 2700)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/3/2/32a850d773602643875_1.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>M.A.C Studio Fix Fluid SPF 15 Mini Soft Matte Foundation With Hyaluronic Acid - NC15
+(15ml)</h3>
+          <p>Foundation</p>
+          <div class="price-add">
+            <span>MRP:₹2250</span>
+            <button onclick="addToCart('MAC Foundation', 2250)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/f/4fe19a2773602575534_01.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>M.A.C Strobe Cream Mini - Pinklite Illuminating Moisturizer & Liquid Highlighter</h3>
+          <p>Highlighter</p>
+          <div class="price-add">
+            <span>MRP:₹1500</span>
+            <button onclick="addToCart('MAC Highlighter', 1500)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/e/1/e1d05aa773602657261_1.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>M.A.C Studio Radiance 24HR Luminous Lift Concealer - NC45
+(11ml)</h3>
+          <p>Concealer</p>
+          <div class="price-add">
+            <span>MRP:₹3100</span>
+            <button onclick="addToCart('MAC Concealer', 3100)">Add +</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="hero">
+      <img class="model" src="https://images.seeklogo.com/logo-png/8/1/mac-cosmetics-logo-png_seeklogo-86748.png" alt="Model with glowing skin" />
+      <div class="hero-text"></div>
+      
+    </section>
+  </div>
+
+  <script>
+     function addToCart(name, price, type) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(item => item.name === name && item.type === type);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1, type });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+        }
+     function closeAllPanels() {
+        document.getElementById('panelNav').style.display = 'none';
+    }
+
+    document.getElementById('navtoggle').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click from bubbling up to the document
+        var panelContent = document.getElementById('panelNav');
+        panelContent.style.display = panelContent.style.display === 'block' ? 'none' : 'block';
+        closeAllPanelsExcept(panelContent);
+    });
+
+    function closeAllPanelsExcept(exceptPanel) {
+        var panels = [document.getElementById('panelNav')];
+        panels.forEach(function(panel) {
+            if (panel !== exceptPanel) {
+                panel.style.display = 'none';
+            }
+        });
+    }
+
+    // Close the panel when clicking anywhere else on the document
+    document.addEventListener('click', function(event) {
+        var panelContent = document.getElementById('panelNav');
+        if (panelContent.style.display === 'block' && !panelContent.contains(event.target) && event.target !== document.getElementById('navtoggle')) {
+            closeAllPanels();
+        }
+    });
+
+    const productsContainer = document.querySelector('.products');
+    window.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            productsContainer.scrollBy({ top: 200, behavior: 'smooth' });
+        }
+    });
+  </script>
+</body>
+</html>

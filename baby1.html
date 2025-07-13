@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MA'sBeaute - Baby</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="stylem.css">
+ 
+</head>
+<body>
+   <div class="nav">
+     <p class="tri_dot" id="navtoggle" >⋮</p>
+        <div id="panelNav" class="panel-content4" >
+            <ul class="panel-list" style="list-style-type: square; font-size: 18px;padding-left: 40px; ">
+                <li style="padding: 5px 0;"><a href="index.html">Home</a></li>
+                <br>
+                <li><a href="skin1.html">Skin</li></li>
+                <br>
+                <li><a href="hair1.html">Hair</a></li>
+                <br>
+                <li><a href="men1.html">Men</a></li>
+                <br>
+                <li><a href="makeup1.html">Makeup</a></li>
+                <br>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+  <div class="container">
+    <section class="products" tabindex="0">
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/2/8/287b9dcSEBAM00000003.jpg" alt="Baby oil" />
+        <div class="details">
+          <h3>Sebamed Baby Bath Routine Combo</h3>
+          <p>Baby Oil</p>
+          <div class="price-add">
+            <span>MRP:₹2801</span>
+            <button onclick="addToCart('Sebamed baby oil', 2801)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/9/8906087772545_1_.jpg" alt="Hair  oil" />
+        <div class="details">
+          <h3>Mamaearth Nourishing Hair Oil For Babies</h3>
+          <p>Hair Oil</p>
+          <div class="price-add">
+            <span>MRP:₹351</span>
+            <button onclick="addToCart('Mamaearth Hair Oil', 351)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/2/5/2589fa7N_8901012111048_1.jpg" alt="Baby Powder" />
+        <div class="details">
+          <h3>Johnson's Natural Baby Powder</h3>
+          <p>Baby Powder</p>
+          <div class="price-add">
+            <span>MRP:₹298</span>
+            <button onclick="addToCart('Johnson Baby Powder', 298)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/d/3/d3e1daa4987176093325(1).jpg" alt="Diapers" />
+        <div class="details">
+          <h3>Pampers Active Baby Diapers New Born - 72 Pack</h3>
+          <p>Diapers</p>
+          <div class="price-add">
+            <span>MRP:₹1199</span>
+            <button onclick="addToCart('Pampers Diapers', 1199)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/3/63369698908009149398ab_01.jpg" alt="Wipes" />
+        <div class="details">
+          <h3>Mother Sparsh 99 % Pure Water Unscented Baby Wipes Pack Of 2</h3>
+          <p>Wipes</p>
+          <div class="price-add">
+            <span>MRP:₹538</span>
+            <button onclick="addToCart('Mother Sparsh Wipes', 538)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/c/6/c6f809d4103040019738_1.jpg" alt="Rash Cream" />
+        <div class="details">
+          <h3>Sebamed Baby Rash Cream, PH 5.5, Panthenol & Wheat Bran, Clinically Tested, For Delicate Skin</h3>
+          <p>Rash Cream</p>
+          <div class="price-add">
+            <span>MRP:₹630</span>
+            <button onclick="addToCart('Sebamed Baby rash Cream', 630)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/3/b3c6265751570406234.jpg" alt="DentalCare" />
+        <div class="details">
+          <h3>Dentoshine Kids Fun Pack - Strawberry</h3>
+          <p>Teeth & DentalCare</p>
+          <div class="price-add">
+            <span>MRP:₹135</span>
+            <button onclick="addToCart('Dentoshine Dental care', 135)">Add +</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="hero">
+      <img class="model" src="baby img.jpg" alt="baby img" />
+      <div class="hero-text">BABY</div>
+      
+    </section>
+  </div>
+
+  <script>
+     function addToCart(name, price, type) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(item => item.name === name && item.type === type);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1, type });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+        }
+
+      function closeAllPanels() {
+        document.getElementById('panelNav').style.display = 'none';
+    }
+
+    document.getElementById('navtoggle').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click from bubbling up to the document
+        var panelContent = document.getElementById('panelNav');
+        panelContent.style.display = panelContent.style.display === 'block' ? 'none' : 'block';
+        closeAllPanelsExcept(panelContent);
+    });
+
+    function closeAllPanelsExcept(exceptPanel) {
+        var panels = [document.getElementById('panelNav')];
+        panels.forEach(function(panel) {
+            if (panel !== exceptPanel) {
+                panel.style.display = 'none';
+            }
+        });
+    }
+
+    // Close the panel when clicking anywhere else on the document
+    document.addEventListener('click', function(event) {
+        var panelContent = document.getElementById('panelNav');
+        if (panelContent.style.display === 'block' && !panelContent.contains(event.target) && event.target !== document.getElementById('navtoggle')) {
+            closeAllPanels();
+        }
+    });
+
+    const productsContainer = document.querySelector('.products');
+    window.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            productsContainer.scrollBy({ top: 200, behavior: 'smooth' });
+        }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA'sBeaute - Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(90deg, #e91e63 35%, #f8bbd0 100%);
+            background-attachment: fixed;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(5px);
+        }
+        .cart {
+            
+            border-radius: 5px;
+            padding: 10px;
+            
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px 0;
+            padding: 8px;
+          
+        }
+        .cart-item > div {
+            flex: 1;
+        }
+        .cart-item > div:first-child {
+            color: #0b0b0b;
+            font-weight: bold;
+        }
+        .cart-item button {
+            margin-left: 5px;
+        }
+        .total {
+            font-weight: bold;
+        }
+
+        .car {
+            height: 600px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .empty_car {
+            width: 400px;
+            position: absolute;
+            top: 200px;
+            z-index: 5; /* Highest priority — appears forward */
+            display: none;
+            background: transparent; /* Initially hidden */
+        }
+
+        .filled_car_image {
+            width: 450px; /* Slightly larger to show it's "full" */
+            position: absolute;
+            top: 180px; /* Adjust position if needed */
+            z-index: 5;
+            display: none;
+            background: transparent; /* Initially hidden */
+        }
+
+       
+
+        @keyframes moveTruck {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(1500px); }
+        }
+
+        
+         /* Small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .cart {
+                width: 95%; /* Take more width on small screens */
+                padding: 15px;
+            }
+            .cart-item {
+                flex-direction: column; /* Stack items vertically */
+                align-items: flex-start; /* Align text to the left */
+                padding: 10px;
+                margin-bottom: 15px; /* More space between stacked items */
+            }
+            .cart-item > div {
+                width: 100%; /* Full width for each stacked div */
+                padding: 5px 0;
+                text-align: left;
+            }
+            .cart-item > div:first-child {
+                font-size: 0.9em; /* Smaller font for item name */
+                margin-bottom: 5px;
+            }
+            .cart-item button {
+                width: auto; /* Allow buttons to size to content */
+                min-width: 40px; /* Ensure minimum width for +/- buttons */
+                padding: 6px 10px;
+            }
+            .cart-item > div:nth-child(2) { /* Quantity buttons container */
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 5px;
+                font-size: 0.9em;
+            }
+            .cart-item > div:nth-child(3) { /* Price */
+                text-align: left;
+                font-size: 0.9em;
+            }
+            .cart-item button:last-child { /* Remove button */
+                align-self: flex-end; /* Align remove button to the right */
+                margin-top: 10px;
+            }
+            .total {
+                width: 95%;
+                padding-right: 0;
+                text-align: center; /* Center total price */
+                font-size: 1.1em;
+            }
+            .action-buttons {
+                flex-direction: column; /* Stack action buttons */
+                width: 95%;
+                gap: 10px;
+                align-items: center; /* Center stacked buttons */
+            }
+            .action-buttons button {
+                width: 100%; /* Full width buttons */
+                padding: 12px;
+                font-size: 1.1em;
+            }
+            .car {
+                height: 300px; /* Smaller height for car section */
+                margin-top: 20px;
+            }
+            .empty_car, .filled_car_image {
+                width: 250px; /* Smaller trucks */
+            }
+            @keyframes moveTruck {
+                0% { transform: translateX(-180%); opacity: 0; }
+                10% { opacity: 1; }
+                90% { opacity: 1; }
+                100% { transform: translateX(180%); opacity: 0; }
+            }
+            .modal-content {
+                width: 95%;
+                padding: 20px;
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 601px) and (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            .cart {
+                width: 90%;
+                padding: 20px;
+            }
+            .cart-item {
+                padding: 10px;
+            }
+            .cart-item > div:first-child {
+                flex: 1.5; /* Give a bit more space */
+            }
+            .total {
+                width: 90%;
+                padding-right: 0;
+            }
+            .action-buttons {
+                width: 90%;
+                justify-content: center; /* Center buttons */
+            }
+            .action-buttons button {
+                width: auto;
+                flex: 1; /* Distribute space evenly */
+                max-width: 200px;
+            }
+            .car {
+                height: 400px;
+            }
+            .empty_car, .filled_car_image {
+                width: 350px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Your Cart</h2>
+    <div class="cart" id="cart-items"></div>
+    <br>
+    <div class="total" id="total-price">Total: ₹0</div>
+    <br>
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="checkout()">Checkout</button>
+    <button onclick="goBack()">Continue Shopping</button>
+
+    <div class="car">
+        <img class="empty_car" src="ChatGPT_Image_Jul_9_2025_09_23_32_AM-removebg-preview-removebg-preview.png" alt="Empty Truck" id="empty-truck">
+        <img class="filled_car_image" src="filled1-removebg-preview-removebg-preview.png" alt="Filled Truck" id="filled-truck">
+        <img class="road" src="road-removebg-preview.png" alt="">
+    </div>
+
+    <script>
+        // Initialize selectedItems globally and ensure it's cleared or managed correctly
+        let selectedItems = [];
+
+        function updateQuantity(index, newQuantity) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (newQuantity < 1) {
+                removeFromCart(index);
+                return;
+            }
+            cart[index].quantity = newQuantity;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        function loadCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = ''; // Clear existing items
+
+            let total = 0;
+
+            // Ensure selectedItems reflects the current cart state, especially after removes
+            // If an item was selected and then removed, its index in selectedItems would be stale.
+            // A better approach is to re-evaluate selections based on the current cart when loading.
+            // For simplicity here, we'll assume a fresh re-render. If you want persistent selection,
+            // you'd need to store 'selected' state within each cart item or in a separate persistent array
+            // that maps to item IDs, not just array indices.
+            // For now, let's make sure the checkboxes are rendered correctly based on `selectedItems`
+
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+
+                // Check if the current item's index is in the selectedItems array
+                // The `checked` attribute for the checkbox will be set based on this.
+                const isChecked = selectedItems.includes(index) ? 'checked' : '';
+
+                cartItem.innerHTML = `
+                    <div>
+                        <input type="checkbox" ${isChecked} onchange="toggleItemSelection(${index}, this.checked)">
+                        [${item.type ? item.type.toUpperCase() : 'ITEM'}] ${item.name} - ₹${item.price} each
+                    </div>
+                    <div>
+                        <button style="min-width: 30px" onclick="updateQuantity(${index}, ${item.quantity-1})">-</button>
+                        ${item.quantity}
+                        <button onclick="updateQuantity(${index}, ${item.quantity+1})">+</button>
+                    </div>
+                    <div>₹${itemTotal}</div>
+                    <button onclick="removeFromCart(${index})">Remove</button>
+                `;
+                cartItemsContainer.appendChild(cartItem);
+            });
+
+            document.getElementById('total-price').innerText = `Total: ₹${total}`;
+
+            // Show or hide truck images based on cart state
+            const emptyTruck = document.getElementById('empty-truck');
+            const filledTruck = document.getElementById('filled-truck');
+
+            if (cart.length === 0) {
+                emptyTruck.style.display = 'block';
+                filledTruck.style.display = 'none';
+            } else {
+                emptyTruck.style.display = 'none';
+                // Only show filled truck if there are items and not actively animating a checkout
+                if (!filledTruck.style.animationName || filledTruck.style.animationName === 'none') {
+                    filledTruck.style.display = 'block';
+                }
+            }
+        }
+
+        function removeFromCart(index) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            // Re-adjust selectedItems after an item is removed to prevent stale indices
+            selectedItems = selectedItems.filter(itemIndex => itemIndex !== index) // Remove the removed item's index
+                                      .map(itemIndex => itemIndex > index ? itemIndex - 1 : itemIndex); // Decrement indices of items after the removed one
+            
+            loadCart(); // Reload the cart to reflect changes
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+            selectedItems = []; // Clear selections when cart is cleared
+            loadCart();
+        }
+
+        // Modified toggleItemSelection to receive the `checked` state
+        function toggleItemSelection(index, isChecked) {
+            if (isChecked) {
+                if (!selectedItems.includes(index)) { // Add only if not already present
+                    selectedItems.push(index);
+                }
+            } else {
+                selectedItems = selectedItems.filter(i => i !== index); // Remove
+            }
+            console.log("Selected Items:", selectedItems); // For debugging
+        }
+
+        function checkout() {
+            if (selectedItems.length === 0) {
+                alert('Please select at least one item');
+                return;
+            }
+            
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            // Create a new array of items that are NOT selected, to keep them in the cart
+            const remainingItems = cart.filter((item, index) => !selectedItems.includes(index));
+            
+            // Calculate total only for selected items
+            const cartToCheckout = cart.filter((item, index) => selectedItems.includes(index));
+            const total = cartToCheckout.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            alert(`Checking out ${selectedItems.length} items. Total: ₹${total}`);
+            
+            // Move filled truck
+            const filledTruck = document.getElementById('filled-truck');
+            filledTruck.style.display = 'block';
+            filledTruck.style.animation = 'moveTruck 2s forwards'; // Move truck animation
+
+            // Listen for animation end to reset the truck and update cart
+            filledTruck.onanimationend = () => {
+                filledTruck.style.animation = 'none'; // Reset animation
+                filledTruck.style.display = 'none'; // Hide filled truck after animation
+                filledTruck.style.transform = 'translateX(0)'; // Reset position
+                
+                // Update localStorage with only the remaining items
+                localStorage.setItem('cart', JSON.stringify(remainingItems));
+                selectedItems = []; // Clear selected items after checkout
+                loadCart(); // Reload the cart to show remaining items or empty state
+            };
+        }
+
+        function goBack() {
+            // You can change this to any page you want the user to return to
+            window.location.href = 'index.html'; 
+        }
+
+        // Load cart items on page load
+        window.onload = loadCart;
+    </script>
+</body>
+</html>

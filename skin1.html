@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MA'sBeaute - Skin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="stylem.css">
+ 
+</head>
+<body>
+   <div class="nav">
+     <p class="tri_dot" id="navtoggle">⋮</p>
+        <div id="panelNav" class="panel-content4">
+            <ul class="panel-list" style="list-style-type: square; font-size: 18px; padding-left: 40px; color: black;">
+               <li style="padding: 5px 0;"><a href="index.html">Home</a></li>
+                <br>
+                <li><a href="makeup1.html">Makeup</li></li>
+                <br>
+                <li><a href="hair1.html">Hair</a></li>
+                <br>
+                <li><a href="men1.html">Men</a></li>
+                <br>
+                <li><a href="baby1.html">Baby</a></li>
+                <br>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+  <div class="container">
+    <section class="products" tabindex="0">
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/d/fdd18dfPLUMX00001034_1.jpg" alt="Facewash" />
+        <div class="details">
+          <h3>Plum</h3>
+          <p>Facewash</p>
+          <div class="price-add">
+            <span>MRP:₹269</span>
+            <button onclick="addToCart('Plum facewash', 269)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/b/bbe1986DOTKE00000054_1a.jpg" alt="Moisturisers" />
+        <div class="details">
+          <h3>Dot & Key Vitamin C + E Super Bright Face Moisturizer For Glowing Skin, Fades Dark Spots</h3>
+          <p>Moisturisers</p>
+          <div class="price-add">
+            <span>MRP:₹441</span>
+            <button onclick="addToCart('Dot & Key Moisturisers', 441)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/7/67f51a3HYPHE00000003_1A.jpg" alt="Serum" />
+        <div class="details">
+          <h3>Hyphen Golden Hour Glow Serum 56% Glow Hyphened All Skin Types</h3>
+          <p>Serum</p>
+          <div class="price-add">
+            <span>MRP:₹617</span>
+            <button onclick="addToCart('Hyphen Glow Serum', 617)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/8/88a48a1THECI00000144_1.jpg" alt="Toner" />
+        <div class="details">
+          <h3>The Ordinary Glycolic Acid 7% Exfoliating Toner</h3>
+          <p>Toner</p>
+          <div class="price-add">
+            <span>MRP:₹1275</span>
+            <button onclick="addToCart('The Ordinary Toner', 1275)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/e/2/e2449dd8904035422467_1.jpg" alt="Masks" />
+        <div class="details">
+          <h3>Dot & Key Anti-Acne Salicylic Green Clay Face Mask For Dark Spots Redution & Balances Oil & Sebum</h3>
+          <p>Masks & Peels</p>
+          <div class="price-add">
+            <span>MRP:₹468</span>
+            <button onclick="addToCart('Dot & Key Mask', 468)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/e/2/e2449ddDOTKE00000278_1.jpg" alt="Eye Care" />
+        <div class="details">
+          <h3>Dot & Key Pomegranate Retinol + Caffeine Under Eye Cream for Dark Circles, Wrinkles & Puffiness</h3>
+          <p>Eye Care</p>
+          <div class="price-add">
+            <span>MRP:₹406</span>
+            <button onclick="addToCart('Dot & Key Eye cream', 406)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/e/2/e2449ddDOTKE00000408_1.jpg" alt="Lip Care" />
+        <div class="details">
+          <h3>Dot & Key Barrier Repair Hydrating Lip Balm SPF 50 PA+++ With Ceramides & Peptides Tinted Cherry Crimson</h3>
+          <p>Lip Care</p>
+          <div class="price-add">
+            <span>MRP:₹224</span>
+            <button onclick="addToCart('Dot & Key Lip care', 224)">Add +</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="hero">
+      <img class="model" src="skin-removebg-preview.jpg" alt="Model with glowing skin" />
+      <div class="hero-text">SKIN</div>
+      
+    </section>
+  </div>
+
+  <script>
+     function addToCart(name, price, type) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(item => item.name === name && item.type === type);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1, type });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+        }
+   function closeAllPanels() {
+        document.getElementById('panelNav').style.display = 'none';
+    }
+
+    document.getElementById('navtoggle').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click from bubbling up to the document
+        var panelContent = document.getElementById('panelNav');
+        panelContent.style.display = panelContent.style.display === 'block' ? 'none' : 'block';
+        closeAllPanelsExcept(panelContent);
+    });
+
+    function closeAllPanelsExcept(exceptPanel) {
+        var panels = [document.getElementById('panelNav')];
+        panels.forEach(function(panel) {
+            if (panel !== exceptPanel) {
+                panel.style.display = 'none';
+            }
+        });
+    }
+
+    // Close the panel when clicking anywhere else on the document
+    document.addEventListener('click', function(event) {
+        var panelContent = document.getElementById('panelNav');
+        if (panelContent.style.display === 'block' && !panelContent.contains(event.target) && event.target !== document.getElementById('navtoggle')) {
+            closeAllPanels();
+        }
+    });
+
+    const productsContainer = document.querySelector('.products');
+    window.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            productsContainer.scrollBy({ top: 200, behavior: 'smooth' });
+        }
+    });
+  </script>
+</body>
+</html>

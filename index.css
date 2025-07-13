@@ -1,0 +1,407 @@
+body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(90deg, #e91e63 35%, #f8bbd0 100%);
+        }
+        .header, .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav {
+            display: flex;
+            height: 200px;
+            justify-content: space-between;
+            padding: 10px;
+            background: linear-gradient(90deg, #cfc9cb 35%, #f8bbd0 100%);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        #disc{
+            position: relative;left: 400px;width: 600px;mix-blend-mode: hard-light;
+        }
+        .nav img {
+            height: 200px;
+            
+        }
+        .ma{
+
+          height: 200px;
+          width: 800px;
+
+        }
+        .nav a {
+            margin: 0 10px;
+            color: #343a40;
+            text-decoration: none;
+        }
+        .hero {
+             background: url(https://t3.ftcdn.net/jpg/02/49/37/60/360_F_249376066_gVv7vB57vuura5JIaSdHuNhdXALddATA.jpg);
+            padding: 40px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            margin: 20px 0;
+        }
+        .categories, .best-sellers {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .category, .product {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .category:hover, .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .category img, .product img {
+            width: 100%;
+            height: auto;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        
+.panel-list{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(5,auto);
+    gap: 10px;
+}
+        .panel-content4 {
+            display: none;
+            position: absolute; /* Use absolute positioning */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #f8f8f8;
+            transition: all 0.3s ease;
+            width: 400px; /* Set a fixed width */
+            z-index: 10;
+        }
+        .nav {
+            position: relative; /* Set relative positioning for the nav */
+        }
+
+
+        .best-sellers {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+    justify-content: center; /* Center aligns the items */
+    gap: 20px; /* Space between items */
+}
+
+.product {
+    height: 300px;
+    flex: 1 1 200px; /* Allows items to grow or shrink */
+    max-width: 200px; /* Set a maximum width for better control */
+    text-align: center; /* Center text under images */
+}
+
+.infinite-scroll-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+  border-radius: 12px;
+  padding: 20px 0;
+}
+
+.infinite-scroll-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll-cards 20s linear infinite;
+  padding: 0 20px;
+  background-color:transparent;
+}
+
+.infinite-scroll-card {
+  flex: 0 0 250px;
+  height: 200px;
+  background: rgb(145, 100, 100);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 300px;
+  width: 600px;
+}
+
+.infinite-scroll-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-content {
+  height: 100%;
+  padding: 20px;
+  color: rgb(229, 215, 215);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-content i {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.card-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+@keyframes scroll-cards {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 3 - 60px));
+  }
+}
+
+/* ------------------------------------------- */
+/* NEW MOBILE RESPONSIVENESS MEDIA QUERIES */
+/* ------------------------------------------- */
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    .header p {
+        font-size: 0.8em; /* Smaller font for header text */
+    }
+
+    .nav {
+        flex-direction: column; /* Stack nav items vertically */
+        height: auto; /* Allow height to adjust */
+        padding: 10px;
+        align-items: center; /* Center items */
+    }
+
+    .nav img {
+        height: 100px; /* Smaller logo */
+        margin-bottom: 10px;
+    }
+     #disc{
+        position: relative;left: 50px;width: 300px;mix-blend-mode: hard-light;
+    }
+
+    .ma {
+        width: 100%; /* Full width for the main logo text */
+        height: 100px; /* Smaller height */
+        margin-bottom: 10px;
+    }
+
+    .nav > div { /* Container for Categories, Brands, Luxe, User, Cart icons */
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping for these links */
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav > div > div { /* The div containing Categories, Brands, Luxe toggles */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav a {
+        margin: 5px 8px; /* Smaller margins for links */
+        font-size: 0.9em;
+    }
+
+    .panel-content4 {
+        width: 90%; /* Make panel take more width */
+        max-width: 300px; /* Limit max width */
+        right: 5%; /* Center it roughly */
+        left: auto; /* Remove left positioning */
+        top: 120px; /* Adjust top position to be below nav */
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .panel-list {
+        gap: 3px; /* Smaller gap in list */
+    }
+
+    .hero h1 {
+        font-size: 1.8em; /* Smaller font for hero heading */
+        padding: 0 10px; /* Add horizontal padding */
+    }
+
+    .hero button {
+        padding: 8px 15px; /* Smaller button padding */
+        font-size: 0.9em;
+    }
+
+    .categories, .best-sellers {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .category, .product {
+        width: 90%; /* Take up more width */
+        max-width: 300px; /* Limit max width */
+        flex: 1 1 100%; /* Ensure one item per row */
+    }
+
+    .brands_head {
+        font-size: 30px; /* Smaller font for brands heading */
+    }
+
+    h2 {
+        font-size: 28px; /* Smaller font for appreciation heading */
+        margin-top: 20px;
+    }
+
+    .infinite-scroll-container {
+        padding: 10px 0;
+        margin: 30px auto;
+    }
+
+    .infinite-scroll-card {
+        flex: 0 0 180px; /* Adjust card size for smaller screens */
+        height: 140px;
+    }
+
+    .card-content i {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .card-content h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .card-content p {
+        font-size: 10px;
+    }
+
+    @keyframes scroll-cards {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-180px * 3 - 40px)); /* Adjust for new card width and gap */
+        }
+    }
+
+    .newsletter input {
+        width: 80%; /* Wider input field */
+        border-radius: 5px; /* Full rounded corners */
+    }
+
+    .newsletter button {
+        border-radius: 5px; /* Full rounded corners */
+        margin-top: 10px; /* Stack button below input */
+        width: 80%;
+    }
+
+    /* Adjust for newsletter layout */
+    div[style*="display: flex; justify-content: center; margin-top: 15px;"] {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) - existing media query, adjusted */
+@media (max-width: 768px) {
+    /* Existing infinite-scroll styles are here, no need to duplicate */
+    /* Added more general styles for tablets */
+    .nav {
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav img, .ma {
+        height: 150px; /* Slightly smaller for tablets */
+        margin-bottom: 10px;
+    }
+
+    .nav > div {
+        width: auto;
+        margin-top: 10px;
+    }
+
+    .categories, .best-sellers {
+        flex-direction: row; /* Keep row for tablets */
+        justify-content: space-around;
+        gap: 15px;
+    }
+
+    .category, .product {
+        flex: 1 1 calc(33% - 20px); /* Three items per row on tablets */
+        max-width: 220px;
+    }
+
+    .panel-content4 {
+        width: 280px; /* Slightly smaller width for tablets */
+        right: 30px; /* Adjust position */
+        top: 80px; /* Adjust position */
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .nav {
+        flex-direction: row;
+        height: 200px;
+        justify-content: space-between;
+    }
+    .nav img {
+        height: 200px;
+    }
+    .ma {
+        width: 800px;
+        height: 200px;
+    }
+    .hero h1 {
+        font-size: 2.5em;
+        position: relative;
+        left: 400px;
+        width: 600px;
+    }
+    .categories, .best-sellers {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .category, .product {
+        width: 200px;
+        flex: 0 0 200px;
+    }
+    .panel-content4 {
+        width: 400px;
+        right: 100px;
+        top: auto; /* Reset top if it was changed by smaller media queries */
+        bottom: auto; /* Reset bottom */
+    }
+}

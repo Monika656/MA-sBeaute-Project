@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MA'sBeaute - Makeup</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="stylem.css">
+ 
+</head>
+<body>
+   <div class="nav">
+    
+     <p class="tri_dot" id="navtoggle" >⋮</p>
+        <div id="panelNav" class="panel-content4" >
+            <ul class="panel-list" style="list-style-type: square; font-size: 18px;padding-left: 40px;">
+                <li style="padding: 5px 0;"><a href="index.html">Home</a></li>
+                <br>
+                <li><a href="skin1.html">Skin</li></li>
+                <br>
+                <li><a href="hair1.html">Hair</a></li>
+                <br>
+                <li><a href="men1.html">Men</a></li>
+                <br>
+                <li><a href="baby1.html">Baby</a></li>
+                <br>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+  <div class="container">
+    <section class="products" tabindex="0">
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/7/a/7ac6ecf773602642878_1.jpg" alt="Foundation" />
+        <div class="details">
+          <h3>Mac</h3>
+          <p>Foundation</p>
+          <div class="price-add">
+            <span>MRP:₹238</span>
+            <button onclick="addToCart('Mac Foundation', 238)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/7/47e3cf9MAYBE00000403z_1.jpg"  alt="Lipstick" />
+        <div class="details">
+          <h3>Maybelline</h3>
+          <p>Lipstick</p>
+          <div class="price-add">
+            <span>MRP:₹679</span>
+            <button onclick="addToCart('Maybelline Lipstick', 679)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/0/0/0060d70LAKME00000333-new_1.jpg" alt="Kajal" />
+        <div class="details">
+          <h3>Parul Garg Beauty Bold Define Matte Kajal - Koyal</h3>
+          <p>Kajal</p>
+          <div class="price-add">
+            <span>MRP:₹689</span>
+            <button onclick="addToCart('Koyal Kajal', 689)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/9/f952968NYSWISSB00255_1.jpg" alt="EyeShadow" />
+        <div class="details">
+          <h3>Swiss Beauty </h3>
+          <p>EyeShadow
+            Ultimate 9 Pigmented Colors Eyeshadow Palette - Shade 02
+          </p>
+          <div class="price-add">
+            <span>MRP:₹263</span>
+            <button onclick="addToCart('Swissn Beauty', 263)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/b/1b95e5eNYKAC00002728_1.jpg" alt="Tint" />
+        <div class="details">
+          <h3>Tint Cosmetics Emily In Paris </h3>
+          <p>Lip N lip Tint</p>
+          <div class="price-add">
+            <span>MRP:₹250</span>
+            <button onclick="addToCart('Emily In Paris lip Tint', 250)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/c/a/caee16cLAKME00002080_1.jpg" alt="Gloss" />
+        <div class="details">
+          <h3>Lakme</h3>
+          <p>Lip Gloss</p>
+          <div class="price-add">
+            <span>MRP:₹639</span>
+            <button onclick="addToCart('Lakme Lip Gloss', 639)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/e/4/e4b20f5MARSX00000419-new_1.jpg" alt="Mascara" />
+        <div class="details">
+          <h3>Mars</h3>
+          <p>Mascara</p>
+          <div class="price-add">
+            <span>MRP:₹315</span>
+            <button onclick="addToCart('Mars Mascara', 315)">Add +</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="hero">
+      <img class="model" src="makeup img.jpg" alt="Model with glowing skin" />
+      <div class="hero-text">MAKEUP</div>
+      
+    </section>
+  </div>
+
+  <script>
+     function addToCart(name, price, type) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(item => item.name === name && item.type === type);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1, type });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+        }
+     function closeAllPanels() {
+        document.getElementById('panelNav').style.display = 'none';
+    }
+
+    document.getElementById('navtoggle').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click from bubbling up to the document
+        var panelContent = document.getElementById('panelNav');
+        panelContent.style.display = panelContent.style.display === 'block' ? 'none' : 'block';
+        closeAllPanelsExcept(panelContent);
+    });
+
+    function closeAllPanelsExcept(exceptPanel) {
+        var panels = [document.getElementById('panelNav')];
+        panels.forEach(function(panel) {
+            if (panel !== exceptPanel) {
+                panel.style.display = 'none';
+            }
+        });
+    }
+
+    // Close the panel when clicking anywhere else on the document
+    document.addEventListener('click', function(event) {
+        var panelContent = document.getElementById('panelNav');
+        if (panelContent.style.display === 'block' && !panelContent.contains(event.target) && event.target !== document.getElementById('navtoggle')) {
+            closeAllPanels();
+        }
+    });
+
+    const productsContainer = document.querySelector('.products');
+    window.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            productsContainer.scrollBy({ top: 200, behavior: 'smooth' });
+        }
+    });
+  </script>
+</body>
+</html>

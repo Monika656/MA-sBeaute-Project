@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MA'sBeaute - Dior</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="stylem.css">
+ 
+</head>
+<body>
+  <style> body{
+      
+       background: linear-gradient(90deg, #989596 35%, #f8bbd0 100%);
+  
+      background-position: center;
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+</style>
+   <div class="nav">
+     <p class="tri_dot" id="navtoggle" >⋮</p>
+        <div id="panelNav" class="panel-content4" >
+            <ul class="panel-list" style="list-style-type: square; font-size: 18px;padding-left: 40px; ">
+                <li style="padding: 5px 0;"><a href="index.html">Home</a></li>
+                <br>
+                <li><a href="chanel1.html">Chanel</a></li>
+                <br>
+                <li><a href="anastasia1.html">Anastacia</a></li>
+                <br>
+                <li><a href="maybelline1.html">Maybelline</a></li>
+                <br>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+  <div class="container">
+    <section class="products" tabindex="0">
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/2/b/2bbfe273348901728829_1.jpg" alt="Dior perfume" />
+        <div class="details">
+          <h3>DIOR Sauvage Eau Forte</h3>
+          <p>perfume</p>
+          <div class="price-add">
+            <span>MRP:₹12900</span>
+            <button onclick="addToCart('Dior Eau Forte Perfume', 12900)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/d/fd028bd3348901550628_1.jpg" alt="" />
+        <div class="details">
+          <h3>DIOR Addict Lip Glow - 001 Pink</h3>
+          <p>Lip Glow</p>
+          <div class="price-add">
+            <span>MRP:₹4100</span>
+            <button onclick="addToCart('Dior Lip Glow', 4100)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/6/a661c903348901713597_1.jpg" alt="" />
+        <div class="details">
+          <h3>DIOR Forever Glow Maximizer - Gold</h3>
+          <p>Glow Maximizer</p>
+          <div class="price-add">
+            <span>MRP:₹4200</span>
+            <button onclick="addToCart('Dior Glow Maximizer', 4200)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/6/a661c903348901708616_1.jpg" alt="" />
+        <div class="details">
+          <h3>DIOR Addict Lipstick - 362 Rose Bonheur
+(3.2g)</h3>
+          <p>Lipstic</p>
+          <div class="price-add">
+            <span>MRP:₹4500</span>
+            <button onclick="addToCart('Dior Lipstick', 4500)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/0/c/0cee6583348901491150_a.jpg" alt="" />
+        <div class="details">
+          <h3>DIOR Lip Glow Oil - 001 Pink
+(6ml)</h3>
+          <p>Lip Glow</p>
+          <div class="price-add">
+            <span>MRP:₹4100</span>
+            <button onclick="addToCart('Dior Lip Glow', 4100)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/a/aa8d45fDIORX00000745_1.jpg" alt="" />
+        <div class="details"> 
+          <h3>DIOR Addict Lip Tint - 651 - Natural Rose
+(5ml)</h3>
+          <p>Lip Tint</p>
+          <div class="price-add">
+            <span>MRP:₹4100</span>
+            <button onclick="addToCart('Dior Addict Lip Tint', 4100)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/4/44d08bd3348901642750_1.jpg" alt="" />
+        <div class="details">
+          <h3>Dior Backstage Face & Body Foundation 2.5 Neutral
+(50ml)</h3>
+          <p>Foundation</p>
+          <div class="price-add">
+            <span>MRP:₹4700</span>
+            <button onclick="addToCart('Dior Foundation', 4700)">Add +</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="hero">
+      <img class="model" src="https://i.pinimg.com/564x/c1/95/d3/c195d38bdf85efae9cbf562e9b45051e.jpg" alt="Model with glowing skin" />
+      <div class="hero-text"></div>
+      
+    </section>
+  </div>
+
+  <script>
+     function addToCart(name, price, type) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(item => item.name === name && item.type === type);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1, type });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+        }
+   function closeAllPanels() {
+        document.getElementById('panelNav').style.display = 'none';
+    }
+
+    document.getElementById('navtoggle').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click from bubbling up to the document
+        var panelContent = document.getElementById('panelNav');
+        panelContent.style.display = panelContent.style.display === 'block' ? 'none' : 'block';
+        closeAllPanelsExcept(panelContent);
+    });
+
+    function closeAllPanelsExcept(exceptPanel) {
+        var panels = [document.getElementById('panelNav')];
+        panels.forEach(function(panel) {
+            if (panel !== exceptPanel) {
+                panel.style.display = 'none';
+            }
+        });
+    }
+
+    // Close the panel when clicking anywhere else on the document
+    document.addEventListener('click', function(event) {
+        var panelContent = document.getElementById('panelNav');
+        if (panelContent.style.display === 'block' && !panelContent.contains(event.target) && event.target !== document.getElementById('navtoggle')) {
+            closeAllPanels();
+        }
+    });
+
+    const productsContainer = document.querySelector('.products');
+    window.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            productsContainer.scrollBy({ top: 200, behavior: 'smooth' });
+        }
+    });
+  </script>
+</body>
+</html>

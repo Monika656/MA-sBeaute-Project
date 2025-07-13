@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MA'sBeaute - Maybelline</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="stylem.css">
+  <style>
+    body{
+      
+       background: linear-gradient(90deg, #989596 35%, #f8bbd0 100%);
+  
+      background-position: center;
+      background-size: 100%;
+      background-attachment: fixed;
+      
+    }
+  </style>
+ 
+</head>
+<body>
+   <div class="nav">
+     <p class="tri_dot" id="navtoggle" >⋮</p>
+        <div id="panelNav" class="panel-content4" >
+            <ul class="panel-list" style="list-style-type: square; font-size: 18px;padding-left: 40px; ">
+                <li style="padding: 5px 0;"><a href="index.html">Home</a></li>
+                <br>
+                <li><a href="chanel1.html">Chanel</a></li>
+                <br>
+                <li><a href="dior1.html">Dior</a></li>
+                <br>
+                <li><a href="lakme1.html">Lakme</a></li>
+                <br>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+  <div class="container">
+    <section class="products" tabindex="0">
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/3/a398c60MAYBE00000715-newadd_1.jpg" alt="" />
+        <div class="details">
+          <h3>Maybelline New York Lash Sensational Sky High Mascara, 802 Very Black, Lengthening & Waterproof
+(6ml)</h3>
+          <p>Mascara</p>
+          <div class="price-add">
+            <span>MRP:₹639</span>
+            <button  onclick="addToCart('Maybelline Macara', 639)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/7/47c1c186902395487432_1.jpg" alt="" />
+        <div class="details">
+          <h3>Maybelline New York Instant Age Rewind Eraser Concealer-Conceal, Contour, Highlight - 130 Medium
+(6ml)</h3>
+          <p>Concealer</p>
+          <div class="price-add">
+            <span>MRP:₹639</span>
+            <button onclick="addToCart('Maybelline Concealer', 639)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/2/a29bd56MAYBE00000769_1.jpg" alt="" />
+        <div class="details">
+          <h3>Maybelline New York Super Stay Lumi-Matte Liquid Foundation - 115, 30H Wear, Transfer Proof
+(35ml)</h3>
+          <p>Foundation</p>
+          <div class="price-add">
+            <span>MRP:₹701</span>
+            <button onclick="addToCart('Maybelline Foundation', 701)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/7/47e3cf9MAYBE00000403z_1.jpg" alt="" />
+        <div class="details">
+          <h3>Maybelline New York Super Stay Vinyl Ink Liquid Lipstick, Instant Shine Lasts Up To 16H - 10 Lippy
+(4.2ML)</h3>
+          <p>Liquid Lipstick</p>
+          <div class="price-add">
+            <span>MRP:₹679</span>
+            <button onclick="addToCart('Maybelline Liquid Lipstick', 679)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/2/f2e2ce56902395974888_1.jpg" alt="" />
+        <div class="details">
+          <h3>Maybelline New York Superstay Teddy Tint Lip & Cheek Color - Mascara Tear
+(5ml)
+</h3>
+          <p>Liquid Lipstick</p>
+          <div class="price-add">
+            <span>MRP:₹749</span>
+            <button onclick="addToCart('Maybelline Liquid Lipstick(Mascara Tear)', 679)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/a/aacbb8bMAYBE00000467_1.jpg" alt="" />
+        <div class="details">
+          <h3>Maybelline New York The Colossal Combo - Mascara + Bold Liner + Kajal
+(3 pcs)</h3>
+          <p>Makeup Combos</p>
+          <div class="price-add">
+            <span>MRP:₹748</span>
+            <button onclick="addToCart('Maybelline Makeup Combo', 748)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/7/47e3cf96923492584206z_1.jpg" alt="" />
+        <div class="details">
+          <h3>Maybelline New York Hypercurl Waterproof Mascara, Smudge & Highly Pigmented Very Black
+(9.2ml)
+</h3>
+          <p>Mascara</p>
+          <div class="price-add">
+            <span>MRP:₹343</span>
+            <button onclick="addToCart('Maybelline Mascara', 343)">Add +</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="hero">
+      <img class="model" src="https://cdn2.avada.io/media/resources/k6kRKwg.jpg" alt="Model with glowing skin" />
+      <div class="hero-text"></div>
+      
+    </section>
+  </div>
+
+  <script>
+     function addToCart(name, price, type) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(item => item.name === name && item.type === type);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1, type });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+        }
+   function closeAllPanels() {
+        document.getElementById('panelNav').style.display = 'none';
+    }
+
+    document.getElementById('navtoggle').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click from bubbling up to the document
+        var panelContent = document.getElementById('panelNav');
+        panelContent.style.display = panelContent.style.display === 'block' ? 'none' : 'block';
+        closeAllPanelsExcept(panelContent);
+    });
+
+    function closeAllPanelsExcept(exceptPanel) {
+        var panels = [document.getElementById('panelNav')];
+        panels.forEach(function(panel) {
+            if (panel !== exceptPanel) {
+                panel.style.display = 'none';
+            }
+        });
+    }
+
+    // Close the panel when clicking anywhere else on the document
+    document.addEventListener('click', function(event) {
+        var panelContent = document.getElementById('panelNav');
+        if (panelContent.style.display === 'block' && !panelContent.contains(event.target) && event.target !== document.getElementById('navtoggle')) {
+            closeAllPanels();
+        }
+    });
+
+    const productsContainer = document.querySelector('.products');
+    window.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            productsContainer.scrollBy({ top: 200, behavior: 'smooth' });
+        }
+    });
+  </script>
+</body>
+</html>

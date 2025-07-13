@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MA'sBeaute - Chanel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="stylem.css">
+ 
+</head>
+<body>
+ <style> body{
+      
+       background: linear-gradient(90deg, #989596 35%, #f8bbd0 100%);
+  
+      background-position: center;
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+</style>
+   <div class="nav">
+     <p class="tri_dot" id="navtoggle" >⋮</p>
+        <div id="panelNav" class="panel-content4" >
+            <ul class="panel-list" style="list-style-type: square; font-size: 18px;padding-left: 40px; ">
+                <li style="padding: 5px 0;"><a href="index.html">Home</a></li>
+                <br>
+                <li><a href="dior1.html">Dior</a></li>
+                <br>
+                <li><a href="clarins1.html">Clarins</a></li>
+                <br>
+                <li><a href="mac1.html">MAC</a></li>
+                <br>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+  <div class="container">
+    <section class="products" tabindex="0">
+      <article class="product">
+        <img style="height: 250px;width: 250px;" src="https://images-static.nykaa.com/media/catalog/product/a/9/a9ad226CHANE00001440_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="" />
+        <div class="details">
+          <h3>GABRIELLE CHANEL FRAGRANCE / PRIMER
+(150ml)</h3>
+          <p>Body mist/Perfume</p>
+          <div class="price-add">
+            <span>MRP:₹11600</span>
+            <button onclick="addToCart('Chanel Body Perfume', 11600)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img style="height: 250px;width: 250px;"  src="https://images-static.nykaa.com/media/catalog/product/0/c/0ca17663145891332254_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="" />
+        <div class="details">
+          <h3>CHANEL
+LA MOUSSE CAMELLIA CLEANSING / CREAM-TO-FOAM
+(150ml)
+</h3>
+          <p>Facewash</p>
+          <div class="price-add">
+            <span>MRP:₹5600</span>
+            <button onclick="addToCart('Chanel Facewash', 5600)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img style="height: 250px;width: 250px;"  src="https://images-static.nykaa.com/media/catalog/product/2/f/2f9d5a23145891362206_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="" />
+        <div class="details">
+          <h3>CHANEL
+CHANCE EAU SPLENDIDE EAU DE PARFUM SPRAY
+(100ml)</h3>
+          <p>Perfume</p>
+          <div class="price-add">
+            <span>MRP:₹16750</span>
+            <button onclick="addToCart('Chanel Perfume', 16750)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img style="height: 250px;width: 250px;" src="https://images-static.nykaa.com/media/catalog/product/1/7/172e9e63145891869286_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="" />
+        <div class="details">
+          <h3>CHANEL
+LES BEIGES BLUSH STICK SHEER BLUSH IN A STICK FOR A HEALTHY GLOW - REFRESH
+(8g)</h3>
+          <p>BLUSH</p>
+          <div class="price-add">
+            <span>MRP:₹4750</span>
+            <button onclick="addToCart('Chanel Blush', 4750)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img style="height: 250px;width: 250px;" src="https://images-static.nykaa.com/media/catalog/product/1/7/172e9e63145891862287_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="" />
+        <div class="details">
+          <h3>CHANEL
+LES BEIGES HEALTHY GOLDEN GLOW POWDER EXCLUSIVE CREATION - Soleil Couchant
+(6g)</h3>
+          <p>Highlighter</p>
+          <div class="price-add">
+            <span>MRP:₹7000</span>
+            <button onclick="addToCart('Chanel Highlighter', 7000)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img style="height: 250px;width: 250px;" src="https://images-static.nykaa.com/media/catalog/product/1/7/172e9e63145891742640_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="" />
+        <div class="details">
+          <h3>CHANEL
+ROUGE COCO FLASH COLOUR LIPSTICK - PHENOMENE
+(3g)</h3>
+          <p>Lipstick</p>
+          <div class="price-add">
+            <span>MRP:₹4750</span>
+            <button onclick="addToCart('Chanel Lipstick', 4750)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img style="height: 250px;width: 250px;" src="https://images-static.nykaa.com/media/catalog/product/2/d/2dfe3f53145891073508_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="" />
+        <div class="details">
+          <h3>CHANEL
+BLEU DE CHANEL EAU DE PARFUM SPRAY
+(100ml)</h3>
+          <p>Perfume</p>
+          <div class="price-add">
+            <span>MRP:₹13800</span>
+            <button onclick="addToCart('Chanel Perfume Spray', 13800)">Add +</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="hero">
+      <img class="model" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Chanel_logo_interlocking_cs.svg/2560px-Chanel_logo_interlocking_cs.svg.png" alt="Model with glowing skin" />
+      <div class="hero-text"></div>
+      
+    </section>
+  </div>
+
+  <script>
+     function addToCart(name, price, type) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(item => item.name === name && item.type === type);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1, type });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+        }
+   function closeAllPanels() {
+        document.getElementById('panelNav').style.display = 'none';
+    }
+
+    document.getElementById('navtoggle').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click from bubbling up to the document
+        var panelContent = document.getElementById('panelNav');
+        panelContent.style.display = panelContent.style.display === 'block' ? 'none' : 'block';
+        closeAllPanelsExcept(panelContent);
+    });
+
+    function closeAllPanelsExcept(exceptPanel) {
+        var panels = [document.getElementById('panelNav')];
+        panels.forEach(function(panel) {
+            if (panel !== exceptPanel) {
+                panel.style.display = 'none';
+            }
+        });
+    }
+
+    // Close the panel when clicking anywhere else on the document
+    document.addEventListener('click', function(event) {
+        var panelContent = document.getElementById('panelNav');
+        if (panelContent.style.display === 'block' && !panelContent.contains(event.target) && event.target !== document.getElementById('navtoggle')) {
+            closeAllPanels();
+        }
+    });
+
+    const productsContainer = document.querySelector('.products');
+    window.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            productsContainer.scrollBy({ top: 200, behavior: 'smooth' });
+        }
+    });
+
+  </script>
+</body>
+</html>

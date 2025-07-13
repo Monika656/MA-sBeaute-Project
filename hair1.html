@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MA'sBeaute - Hair</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="stylem.css">
+ 
+</head>
+<body>
+   <div class="nav">
+     <p class="tri_dot" id="navtoggle" >⋮</p>
+        <div id="panelNav" class="panel-content4" >
+            <ul class="panel-list" style="list-style-type: square; font-size: 18px; padding-left: 40px;">
+                <li style="padding: 5px 0;"><a href="index.html">Home</a></li>
+                <br>
+                <li><a href="skin1.html">Skin</li></li>
+                <br>
+                <li><a href="makeup1.html">Makeup</a></li>
+                <br>
+                <li><a href="men1.html">Men</a></li>
+                <br>
+                <li><a href="baby1.html">Baby</a></li>
+                <br>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+  <div class="container">
+    <section class="products" tabindex="0">
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/b/ab1162cLOREA00000632_1.jpg" alt="Bobbi Brown Taupe Bronser" />
+        <div class="details">
+          <h3>L’Oréal Paris Hyaluron Pure 72H Purifying Shampoo, For Oily Scalp & Dry Hair With Salicylic And Hyaluronic Acid</h3>
+          <p>Shampoo</p>
+          <div class="price-add">
+            <span>MRP:₹804</span>
+            <button onclick="addToCart('Loreal Paris Shampoo', 804)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/8/b8e721bANOAA00000006_a1.jpg" alt="Make Up For Ever HD Foundation" />
+        <div class="details">
+          <h3>Anomaly Refreshing Dry Shampoo with Rice Starch & Tea Tree Oil</h3>
+          <p>Dry Shampoo</p>
+          <div class="price-add">
+            <span>MRP:₹850</span>
+            <button onclick="addToCart('Anomaly Dry Shampoo', 850)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/b/4ba1820NYDFBLS000001_1.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>De Fabulous Reviver Hair Repair Conditioner</h3>
+          <p>Conditioner</p>
+          <div class="price-add">
+            <span>MRP:₹1575</span>
+            <button onclick="addToCart('De Fabulous Conditioner', 1575)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/0/903d4d58901088158831_1.jpg" alt="Hair oil" />
+        <div class="details">
+          <h3>Parachute Advansed Gold Coconut Hair Oil With Vitamin-E For Long, Strong & Gorgeous Hair</h3>
+          <p>Hair Oil</p>
+          <div class="price-add">
+            <span>MRP:₹266</span>
+            <button onclick="addToCart('Parachute hair Oil', 266)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/f/ff61eaaKERAS00000019_1.jpg" alt="Hair Serum" />
+        <div class="details">
+          <h3>Kerastase Genesis Anti-Hair Fall Daily Scalp Serum, With 1.5% Aminexil & Ginger Root Extract</h3>
+          <p>Hair Serum</p>
+          <div class="price-add">
+            <span>MRP:₹5100</span>
+            <button onclick="addToCart('Kerastase Hair Serum', 5100)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/0/90cedf56924339210784_1.jpg" alt="Hair Cream" />
+        <div class="details">
+          <h3>Schwarzkopf Professional SPA Essence Enriching Cream Masque For Damaged Hair</h3>
+          <p>Hair Creams</p>
+          <div class="price-add">
+            <span>MRP:₹594</span>
+            <button onclick="addToCart('Schwarzkopf Hair Creams', 594)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/d/1d394cbBEAAJ00000044.jpg" alt="Hair Supplements" />
+        <div class="details">
+          <h3>Beautywise Hair Rescue Biotin & Keratin Hair Aminos Vitamins, DHT Blocker for Hairfall Capsules</h3>
+          <p>Hair Supplements</p>
+          <div class="price-add">
+            <span>MRP:₹1039</span>
+            <button onclick="addToCart('Beautywise Hair Supplements', 1039)">Add +</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="hero">
+      <img class="model" src="hair img.jpg" alt="Model with glowing hair" />
+      <div class="hero-text">HAIR</div>
+      
+    </section>
+  </div>
+
+  <script>
+     function addToCart(name, price, type) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(item => item.name === name && item.type === type);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1, type });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+        }
+    function closeAllPanels() {
+        document.getElementById('panelNav').style.display = 'none';
+    }
+
+    document.getElementById('navtoggle').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click from bubbling up to the document
+        var panelContent = document.getElementById('panelNav');
+        panelContent.style.display = panelContent.style.display === 'block' ? 'none' : 'block';
+        closeAllPanelsExcept(panelContent);
+    });
+
+    function closeAllPanelsExcept(exceptPanel) {
+        var panels = [document.getElementById('panelNav')];
+        panels.forEach(function(panel) {
+            if (panel !== exceptPanel) {
+                panel.style.display = 'none';
+            }
+        });
+    }
+
+    // Close the panel when clicking anywhere else on the document
+    document.addEventListener('click', function(event) {
+        var panelContent = document.getElementById('panelNav');
+        if (panelContent.style.display === 'block' && !panelContent.contains(event.target) && event.target !== document.getElementById('navtoggle')) {
+            closeAllPanels();
+        }
+    });
+
+    const productsContainer = document.querySelector('.products');
+    window.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            productsContainer.scrollBy({ top: 200, behavior: 'smooth' });
+        }
+    });
+  </script>
+</body>
+</html>

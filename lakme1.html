@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MA'sBeaute - Lakme</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="stylem.css">
+ 
+</head>
+<body>
+   <style> body{
+      
+       background: linear-gradient(90deg, #989596 35%, #f8bbd0 100%);
+  
+      background-position: center;
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+</style>
+   <div class="nav">
+     <p class="tri_dot" id="navtoggle">⋮</p>
+        <div id="panelNav" class="panel-content4">
+            <ul class="panel-list" style="list-style-type: square; font-size: 18px;padding-left: 40px; ">
+                <li style="padding: 5px 0;"><a href="index.html">Home</a></li>
+                <br>
+                <li><a href="chanel1.html">Chanel</a></li>
+                <br>
+                <li><a href="dior1.html">Dior</a></li>
+                <br>
+                <li><a href="mac1.html">MAC</a></li>
+                <br>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+  <div class="container">
+    <section class="products" tabindex="0">
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/3/b3485d7LAKME00000622-first.jpg" alt="Bobbi Brown Taupe Bronser" />
+        <div class="details">
+          <h3>Lakme 9 To 5 Powerplay Priming Foundation Built In Primer Long Lasting SPF 25 Warm Light
+(25ml)</h3>
+          <p>Foundation</p>
+          <div class="price-add">
+            <span>MRP:₹480</span>
+            <button onclick="addToCart('Lakme Foundation', 480)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/0/0/0060d70LAKME00000766-new_1.jpg" alt="Make Up For Ever HD Foundation" />
+        <div class="details">
+          <h3>Lakme Unreal Glow Face Primer
+(30 g)</h3>
+          <p>Face Primer</p>
+          <div class="price-add">
+            <span>MRP:₹780</span>
+            <button onclick="addToCart('Lakme Face Primer', 780)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/9/89e3941LAKME00002083_1.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>Lakme Sun Expert Dry Matte Fluid SPF 50 PA++++ Sunscreen With 1% Niacinamide & Ceramide
+(50ml)</h3>
+          <p>Face Sunscreen</p>
+          <div class="price-add">
+            <span>MRP:₹445</span>
+            <button onclick="addToCart('Lakme Face Sunscreen', 445)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/d/b/db453c4LAK_8901030366086_M.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>Lakme Xtraordin-Airy Mattereal Mousse Foundation, Matte Finish, With SPF8, 01 Classic Ivory
+(25g)</h3>
+          <p>Foundation</p>
+          <div class="price-add">
+            <span>MRP:₹668</span>
+            <button onclick="addToCart('Lakme Classic Ivory Foundation', 668)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/7/9/79b36beLAKME00000792_1.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>Lakme Xtraordin-Airy Velvet Matte Lip Mousse - 304 Chocolate Temptation
+(4.6 g)</h3>
+          <p>Liquid Lipstick</p>
+          <div class="price-add">
+            <span>MRP:₹792</span>
+            <button onclick="addToCart('Lakme Liquid Lipstick', 792)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/c/8/c81732fLAKME00000467_1.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>Lakme Eyeconic Power Pack Combo
+(3 pcs)
+</h3>
+          <p>Facial Kits</p>
+          <div class="price-add">
+            <span>MRP:₹955</span>
+            <button onclick="addToCart('Lakme Facial Kits', 955)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/d/8d1d32e8901030753794_01.jpg" alt="Anastacia Beverly Hills Moon Child Palette" />
+        <div class="details">
+          <h3>Lakme Perfect Radiance Brightening Day Cream With Sunscreen Protection
+(50g)</h3>
+          <p>Day Cream</p>
+          <div class="price-add">
+            <span>MRP:₹359</span>
+            <button onclick="addToCart('Lakme Day Cream', 359)">Add +</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="hero">
+      <img class="model" src="https://1000logos.net/wp-content/uploads/2020/04/Lakme-Logo-1996.jpg" alt="" />
+      <div class="hero-text"></div>
+      
+    </section>
+  </div>
+
+  <script>
+     function addToCart(name, price, type) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(item => item.name === name && item.type === type);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1, type });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+        }
+    function closeAllPanels() {
+        document.getElementById('panelNav').style.display = 'none';
+    }
+
+    document.getElementById('navtoggle').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click from bubbling up to the document
+        var panelContent = document.getElementById('panelNav');
+        panelContent.style.display = panelContent.style.display === 'block' ? 'none' : 'block';
+        closeAllPanelsExcept(panelContent);
+    });
+
+    function closeAllPanelsExcept(exceptPanel) {
+        var panels = [document.getElementById('panelNav')];
+        panels.forEach(function(panel) {
+            if (panel !== exceptPanel) {
+                panel.style.display = 'none';
+            }
+        });
+    }
+
+    // Close the panel when clicking anywhere else on the document
+    document.addEventListener('click', function(event) {
+        var panelContent = document.getElementById('panelNav');
+        if (panelContent.style.display === 'block' && !panelContent.contains(event.target) && event.target !== document.getElementById('navtoggle')) {
+            closeAllPanels();
+        }
+    });
+
+    const productsContainer = document.querySelector('.products');
+    window.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            productsContainer.scrollBy({ top: 200, behavior: 'smooth' });
+        }
+    });
+  </script>
+</body>
+</html>

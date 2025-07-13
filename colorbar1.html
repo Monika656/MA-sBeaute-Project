@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MA'sBeaute - Colorbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="stylem.css">
+ 
+</head>
+<body>
+  <style> body{
+      
+       background: linear-gradient(90deg, #989596 35%, #f8bbd0 100%);
+  
+      background-position: center;
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+</style>
+   <div class="nav">
+     <p class="tri_dot" id="navtoggle" >⋮</p>
+        <div id="panelNav" class="panel-content4" >
+            <ul class="panel-list" style="list-style-type: square; font-size: 18px;padding-left: 40px; ">
+                <li style="padding: 5px 0;"><a href="index.html">Home</a></li>
+                <br>
+                <li><a href="chanel1.html">Chanel</a></li>
+                <br>
+                <li><a href="anastasia1.html">Anastacia</a></li>
+                <br>
+                <li><a href="clarins1.html">Clarins</a></li>
+                <br>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+  <div class="container">
+    <section class="products" tabindex="0">
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/3/4319139COLOR00000773_1.jpg" alt="" />
+        <div class="details">
+          <h3>Colorbar Illuminating Base Combo
+(2 pcs)</h3>
+          <p>Makeup Combo</p>
+          <div class="price-add">
+            <span>MRP:₹1234</span>
+            <button onclick="addToCart('Colorbar Makeup Combo', 1234)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/f/1fb12e88904052452058_1.jpg" alt="" />
+        <div class="details">
+          <h3>Colorbar Shine N Shimmer Complete Makeup Kit
+(9 Pcs)</h3>
+          <p>Makeup Kit</p>
+          <div class="price-add">
+            <span>MRP:₹4854</span>
+            <button onclick="addToCart('Colorbar Makeup Kit', 4854)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/5/15aa834COLOR00000848_1.jpg" alt="" />
+        <div class="details">
+          <h3>Colorbar Kissproof Lipstick - Dark Coco
+(3g)</h3>
+          <p>Lipstick</p>
+          <div class="price-add">
+            <span>MRP:₹600</span>
+            <button onclick="addToCart('Colorbar Lipstick', 600)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/7/1/713d7248904052404491_1.jpg" alt="" />
+        <div class="details">
+          <h3>Colorbar Kiss Proof Lip Stain - Haute Latte - 007
+(6.5ml)</h3>
+          <p>Liquid Lipstick</p>
+          <div class="price-add">
+            <span>MRP:₹769</span>
+            <button onclick="addToCart('Colorbar Liquid Lipstick', 769)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/b/bb76017COLOR00000098_1.jpg" alt="" />
+        <div class="details">
+          <h3>Colorbar X Jacqueline Wink With Love 14hrs Stay Eyeliner - Black Charm-001
+(1ml)</h3>
+          <p>Eyeliner</p>
+          <div class="price-add">
+            <span>MRP:₹749</span>
+            <button onclick="addToCart('Colorbar Eyeliner', 749)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/8/98e21ac8904052433385_1.jpg" alt="" />
+        <div class="details">
+          <h3>Colorbar Flawless Finish Primer
+(30ml)</h3>
+          <p>Face Primer</p>
+          <div class="price-add">
+            <span>MRP:₹514</span>
+            <button onclick="addToCart('Colorbar FAace Primer', 514)">Add +</button>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/c/bcc91acCLRBR_AMEL_1.jpg" alt="" />
+        <div class="details">
+          <h3>Colorbar All-Matte Eyeliner - Matte Black 001
+(2.5ml)</h3>
+          <p>Eyeliner</p>
+          <div class="price-add">
+            <span>MRP:₹585</span>
+            <button onclick="addToCart('Colorbar Eyeliner', 585)">Add +</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="hero">
+      <img class="model" src="https://rcity.in/rcity-admin/brand_logo/colorbar.png" alt="Model with glowing skin" />
+      <div class="hero-text"></div>
+      
+    </section>
+  </div>
+
+  <script>
+     function addToCart(name, price, type) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(item => item.name === name && item.type === type);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1, type });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+        }
+    function closeAllPanels() {
+        document.getElementById('panelNav').style.display = 'none';
+    }
+
+    document.getElementById('navtoggle').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click from bubbling up to the document
+        var panelContent = document.getElementById('panelNav');
+        panelContent.style.display = panelContent.style.display === 'block' ? 'none' : 'block';
+        closeAllPanelsExcept(panelContent);
+    });
+
+    function closeAllPanelsExcept(exceptPanel) {
+        var panels = [document.getElementById('panelNav')];
+        panels.forEach(function(panel) {
+            if (panel !== exceptPanel) {
+                panel.style.display = 'none';
+            }
+        });
+    }
+
+    // Close the panel when clicking anywhere else on the document
+    document.addEventListener('click', function(event) {
+        var panelContent = document.getElementById('panelNav');
+        if (panelContent.style.display === 'block' && !panelContent.contains(event.target) && event.target !== document.getElementById('navtoggle')) {
+            closeAllPanels();
+        }
+    });
+
+    const productsContainer = document.querySelector('.products');
+    window.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowDown") {
+            event.preventDefault();
+            productsContainer.scrollBy({ top: 200, behavior: 'smooth' });
+        }
+    });
+  </script>
+</body>
+</html>
